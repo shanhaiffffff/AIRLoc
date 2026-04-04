@@ -10,6 +10,7 @@ We conducted experiments based on SemRayLoc. You can download the dataset from S
 ## Usage
 
 ### Generate optimal weight pseudo-labels
+You need to modify the weights' saving path according to your needs.
 ```
 python -m evaluation.generate_best_weights --config_file config_eval.yaml
 ```
@@ -21,7 +22,6 @@ python -m evaluation.train_mlp_weight --config_file config_eval.yaml --weights_f
 ```
 
 ### evaluate
-
 ```
 python -m evaluation.eval_localization --config_file config_eval.yaml --checkpoint <checkpoint> --split test --smooth_lambda 0.01 --smooth_iter 50
 ```
